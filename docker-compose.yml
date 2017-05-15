@@ -12,6 +12,16 @@ services:
     networks:
       - blockchain
 
+  blockchain-front:
+    container_name: blockchain-front
+    image: blockhaineveris/blockchain-front:2.0
+    ports:
+      - "9999:9999"
+    environment:
+      JAVA_OPTS: "-Xmx1024m -Xms1024m"
+    networks:
+      - blockchain
+
 networks:
   blockchain:
     driver: bridge
