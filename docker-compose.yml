@@ -11,3 +11,7 @@ services:
       JAVA_OPTS: "-Xmx1024m -Xms1024m"
     networks:
       - blockchain
+
+networks:
+  blockchain:
+    driver: bridge
