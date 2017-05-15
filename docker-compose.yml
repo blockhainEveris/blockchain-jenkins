@@ -14,13 +14,7 @@ services:
 
   blockchain-front:
     container_name: blockchain-front
-    image: blockhaineveris/blockchain-front:develop
-    ports:
-      - "9999:9999"
-    environment:
-      JAVA_OPTS: "-Xmx1024m -Xms1024m"
-    networks:
-      - blockchain
+    image: blockhaineveris/blockchain-front:3.0
 
 networks:
   blockchain:
