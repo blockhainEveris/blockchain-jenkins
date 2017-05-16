@@ -14,7 +14,7 @@ services:
 
   blockchain-front:
     container_name: blockchain-front
-    image: blockhaineveris/blockchain-front:3.0
+    image: blockhaineveris/blockchain-front:3.2
     volumes:
       - ./config.ts:/blockchain-everis/src/config/config.ts
     ports:
