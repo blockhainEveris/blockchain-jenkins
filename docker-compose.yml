@@ -7,18 +7,12 @@ services:
     image: blockhaineveris/blockchain-middleware:develop
     ports:
       - "8081:8080"
+    volumes:
+      - /tmp/blockchain-middleware:/tmp
     environment:
       JAVA_OPTS: "-Xmx1024m -Xms1024m"
     networks:
       - blockchain
-
-  blockchain-front:
-    container_name: blockchain-front
-    image: blockhaineveris/blockchain-front:3.2
-    volumes:
-      - ./config.ts:/blockchain-everis/src/config/config.ts
-    ports:
-      - "9999:9999"
 
   elasticsearch:
     container_name: elastic
