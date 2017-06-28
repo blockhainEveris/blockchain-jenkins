@@ -16,7 +16,7 @@ services:
 
   blockchain-demo:
    container_name: blockchain-demo
-   image: blockhaineveris/blockchain-middleware:develop
+   image: blockhaineveris/blockchain-middleware:master
    ports:
      - "8088:8081"
    volumes:
